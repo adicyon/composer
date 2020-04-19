@@ -38,7 +38,7 @@ class PackageInstaller extends Installer
         if (isset($extra['apply-library-path'])) {
             $path = $extra['apply-library-path'];
         } else {
-            $path = $extra['apply']['library']['path'] ?? 'common/library';
+            $path = $extra['apply']['library']['path'] ?? 'common';
         }
 
         // if explicitly set to something invalid (e.g. `false`), install to vendor dir
