@@ -5,10 +5,10 @@
     "homepage": "https://composer.library.com",
     "type": "composer-plugin",
     "require": {
+        "apply/library": "*",
         "composer-plugin-api": "^1.0"
     },
     "require-dev": {
-        "apply/library": "*",
         "composer/composer": "^1.8"
     },
     "autoload": {
