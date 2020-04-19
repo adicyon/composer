@@ -17,7 +17,7 @@ class Library
     /**
      * @var string $path
      */
-    protected $path = 'common/library';
+    protected $path = 'common';
 
     /**
      * @var string $filename
