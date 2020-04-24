@@ -3,6 +3,7 @@
     "description": "Apply's Library Composer",
     "license": "MIT",
     "homepage": "https://composer.library.com",
+    "minimum-stability": "dev",
     "type": "composer-plugin",
     "require": {
         "apply/library": "*",

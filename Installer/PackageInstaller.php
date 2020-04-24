@@ -34,6 +34,9 @@ class PackageInstaller extends Installer
             $extra = [];
         }
 
+        var_dump($package->getPrettyName(), $package->getExtra());
+
+
         // use path from configuration, otherwise fall back to default
         if (isset($extra['apply-library-path'])) {
             $path = $extra['apply-library-path'];
@@ -52,6 +55,8 @@ class PackageInstaller extends Installer
             throw new InvalidArgumentException('The path ' . $path . ' is an unsafe installation directory for ' . $package->getPrettyName() . '.');
         }
 
-        return $path.'/'.$package->getPrettyName();
+        $plugin = $package->getExtra()['apply']['vendor'] ?? $package->getPrettyName();
+
+        return $path.'/'.$plugin;
     }
 }
