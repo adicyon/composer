@@ -34,9 +34,6 @@ class PackageInstaller extends Installer
             $extra = [];
         }
 
-        var_dump($package->getPrettyName(), $package->getExtra());
-
-
         // use path from configuration, otherwise fall back to default
         if (isset($extra['apply-library-path'])) {
             $path = $extra['apply-library-path'];

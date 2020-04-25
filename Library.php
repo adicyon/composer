@@ -2,10 +2,10 @@
 
 namespace Apply\Composer;
 
-use Apply\Library\Support\SplFileInfo;
 use Composer\Composer;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\Finder\SplFileInfo;
 
 class Library
 {
@@ -134,7 +134,7 @@ class Library
      */
     public function generatePackage($file)
     {
-        $item = $file->getJsonDecode();
+        $item = json_decode($file->getContents(), true);
         $item['composer'] = $file->getPath().'/composer.json';
         return $item;
 

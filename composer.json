@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "type": "composer-plugin",
     "require": {
-        "apply/library": "*",
+        "symfony/finder": "^5.0",
         "composer-plugin-api": "^1.0"
     },
     "require-dev": {
