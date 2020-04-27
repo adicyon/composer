@@ -5,7 +5,6 @@ namespace Apply\Composer;
 use Composer\Composer;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
-use Symfony\Component\Finder\SplFileInfo;
 
 class Library
 {
@@ -118,9 +117,7 @@ class Library
             ->name($this->getFilename());
 
         foreach ($files as $file) {
-
-            $item = new SplFileInfo($file);
-            $data = $this->generatePackage($item);
+            $data = $this->generatePackage($file);
             $this->packages[] = $data;
         }
 
